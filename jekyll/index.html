@@ -4,26 +4,34 @@ layout: default
 
 <header>
   <div class="container py-3 px-2">
-    <div class="flex h-3 mb-3">
-      <img src="/assets/decent-logo.svg" class="hp-100" /><super class="tn-1">&trade;</super>
+    <div class="mb-3">
+      <div class="flex h-3 mb-2">
+        <img src="/assets/decent-logo.svg" class="hp-100" /><super class="tn-1">&trade;</super>
+      </div>
+      <p class="tn-2 cg-4 uppercase tracked">A Functional CSS Library</p>
     </div>
-
     <a href="https://badge.fury.io/js/decent-scss">
       <img src="https://badge.fury.io/js/decent-scss.svg" />
     </a>
-
     <a class="github-button" href="https://github.com/decent-scss/decent" data-count-href="/decent-scss/decent/stargazers" data-count-api="/repos/decent-scss/decent#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star decent-scss/decent on GitHub">Star</a>
-
-
   </div>
 </header>
 
 <section class="pt-8">
-  <div class="container">
-    <div class="col-6 px-2">
-      <p class="t-4 tw-semibold mb-2">This is Functional CSS – f(scss).</p>
-      <p class="t-1 pb-4 bb-7">Alternatively refered to as <i>Utility Classes</i>, the term <i>Functional CSS</i> came about as we found that we could use this method to develop entire websites and applications.</p>
+  <div class="container px-2">
+    <div class="row bb-7">
+      <div class="col-6">
+        <p class="t-4 tw-semibold mb-2">This is Functional CSS – f(scss).</p>
+        <p class="t-1 pb-4">Alternatively refered to as <i>Utility Classes</i>, the term <i>Functional CSS</i> came about as we found that we could use this method to develop entire websites and applications.</p>
+      </div>
     </div>
+    <!--
+    <nav class="mln-1 ">
+      <a class="uppercase tracked p-1">Overview</a>
+      <a class="uppercase tracked p-1">Functional</a>
+      <a class="uppercase tracked p-1">Examples</a>
+    </nav>
+    -->
   </div>
 </section>
 
@@ -34,10 +42,17 @@ layout: default
      body="Includes something about settings."
   %}
 
+  <h3 class="t-1 tw-semibold mb-2 px-2">Install Decent</h3>
   <div class="md-col-6">
-    <div class="row cbgg-8 p-2 mb-2">
+    <div class="row cbgg-8 p-2 ">
       <pre><code>$ npm install decent-scss</pre></code>
     </div>
+    <div class="row p-2 mb-2">
+      <p class="tn-1 mb-1">or</p>
+      <a href="#" class="tn-1 c-black tw-semibold uppercase tracked p-1 mln-1">Download the Source</a>
+    </div>
+
+    <h3 class="t-1 tw-semibold mb-2 px-2">Import it into your Build</h3>
     <div class="row cbgg-8 p-2">
       <pre><code>@import <span class="cg-5">path/to/decent-scss/</span>modules/all.scss</span>;</pre></code>
     </div>
@@ -143,11 +158,11 @@ layout: default
   <div class="flex mln-1">
     <div class="wp-100 pl-1 mb-2">
       <div class="h-8 cbgg-8 relative">
-        <div class="wp-25 h-6 cbgg-2 m-1 absolute top-0 left-0"></div>
-        <div class="wp-25 h-6 cbgg-2 m-1 absolute top-0 right-0"></div>
-        <div class="wp-25 h-6 cbgg-2 m-1 absolute bottom-0 left-0"></div>
-        <div class="wp-25 h-6 cbgg-2 m-1 absolute bottom-0 right-0"></div>
-        <div class="wp-25 h-6 cbgg-2 m-1 absolute origin-center top-50 left-50"></div>
+        <div class="wp-20 h-5 cbgg-2 m-2 absolute top-0 left-0"></div>
+        <div class="wp-20 h-5 cbgg-2 m-2 absolute top-0 right-0"></div>
+        <div class="wp-20 h-5 cbgg-2 m-2 absolute bottom-0 left-0"></div>
+        <div class="wp-20 h-5 cbgg-2 m-2 absolute bottom-0 right-0"></div>
+        <div class="wp-20 h-5 cbgg-2 absolute origin-center top-50 left-50"></div>
       </div>
       <div class="cbgg-8 p-2 bt-thick-white">
         <pre><code>&lt;div class="<span class="tw-bold">relative</span>">
@@ -387,5 +402,56 @@ layout: default
     </div>
   </div>
 </section>
+
+<section class="container pb-4">
+  {% include section.html
+     heading="Display"
+     body="Decent features an infinitely nestable grid based on percentage widths. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor."
+  %}
+</section>
+
+<section class="container pb-4">
+  {% include section.html
+     heading="Interaction"
+     body="Decent features an infinitely nestable grid based on percentage widths. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor."
+  %}
+</section>
+
+<section class="container pb-4">
+  {% include section.html
+     heading="Overlay"
+     body="Decent features an infinitely nestable grid based on percentage widths. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor."
+  %}
+</section>
+
+<section class="container pb-4">
+  {% include section.html
+     heading="Table"
+     body="Decent features an infinitely nestable grid based on percentage widths. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor."
+  %}
+</section>
+
+<section class="container pb-4">
+  {% include section.html
+     heading="Reset"
+     body="Decent features an infinitely nestable grid based on percentage widths. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor."
+  %}
+</section>
+
+<section class="container pb-4">
+  {% include section.html
+     heading="Style"
+     body="Decent features an infinitely nestable grid based on percentage widths. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor."
+  %}
+</section>
+
+
+<footer>
+  <div class="container px-2">
+    <div class="bt-7 pt-2 pb-4">
+      <p class="tn-1 cg-4 antialiased">Developed by <a class="cg-3" href="http://chrisgriffith.co">Chris Griffith</a> &amp; <a class="cg-3" href="http://seanwash.com">Sean Washington</a>.</p>
+    </div>
+  </div>
+</footer>
 
 <script async defer src="https://buttons.github.io/buttons.js"></script>

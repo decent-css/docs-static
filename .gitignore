@@ -1,5 +1,6 @@
 .DS_Store
 _config.yml
+Rakefile
 
 node_modules
 public
