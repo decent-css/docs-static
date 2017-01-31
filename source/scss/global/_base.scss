@@ -1,0 +1,28 @@
+* { box-sizing: border-box; }
+
+.code__single {
+  @extend .tn-1;
+  @extend .rounded;
+  @extend .cbgg-7;
+
+  padding: 0.2rem 0.45rem 0 0.35rem;
+}
+
+.code__block {
+  @extend .tn-1;
+  @extend .rounded;
+  @extend .cbgg-2;
+  @extend .cg-8;
+
+  @extend .p-2;
+}
+
+.code--dark {
+  @extend .tn-1;
+  // @extend .b-6;
+  @extend .rounded;
+  @extend .cbgg-3;
+  @extend .cg-8;
+
+  padding: 0.1rem 0.35rem 0;
+}

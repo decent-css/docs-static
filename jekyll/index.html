@@ -1,0 +1,391 @@
+---
+layout: default
+---
+
+<header>
+  <div class="container py-3 px-2">
+    <div class="flex h-3 mb-3">
+      <img src="/assets/decent-logo.svg" class="hp-100" /><super class="tn-1">&trade;</super>
+    </div>
+
+    <a href="https://badge.fury.io/js/decent-scss">
+      <img src="https://badge.fury.io/js/decent-scss.svg" />
+    </a>
+
+    <a class="github-button" href="https://github.com/decent-scss/decent" data-count-href="/decent-scss/decent/stargazers" data-count-api="/repos/decent-scss/decent#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star decent-scss/decent on GitHub">Star</a>
+
+
+  </div>
+</header>
+
+<section class="pt-8">
+  <div class="container">
+    <div class="col-6 px-2">
+      <p class="t-4 tw-semibold mb-2">This is Functional CSS – f(scss).</p>
+      <p class="t-1 pb-4 bb-7">Alternatively refered to as <i>Utility Classes</i>, the term <i>Functional CSS</i> came about as we found that we could use this method to develop entire websites and applications.</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="container pt-6 pb-5">
+  {% include section.html
+     heading="Getting Started"
+     body="Includes something about settings."
+  %}
+
+  <div class="md-col-6">
+    <div class="row cbgg-8 p-2 mb-2">
+      <pre><code>$ npm install decent-scss</pre></code>
+    </div>
+    <div class="row cbgg-8 p-2">
+      <pre><code>@import <span class="cg-5">path/to/decent-scss/</span>modules/all.scss</span>;</pre></code>
+    </div>
+  </div>
+</section>
+
+<section class="container pt-6 pb-5">
+
+  {% include section.html
+     heading="Grid"
+     body="Decent features an infinitely nestable grid based on percentage widths. Grid classes can be used in both a float-style grid and within flexbox containers."
+  %}
+
+  <div class="row cbgg-8 p-2">
+    <div class="row ta-center mb-1 mln-1">
+      <div class="col-2 pl-1"><div class="py-1 cbgg-2"><code class="code--dark">.col-2</code></div></div>
+      <div class="col-2 pl-1"><div class="py-1 cbgg-2"><code class="code--dark">.col-2</code></div></div>
+      <div class="col-2 pl-1"><div class="py-1 cbgg-2"><code class="code--dark">.col-2</code></div></div>
+      <div class="col-2 pl-1"><div class="py-1 cbgg-2"><code class="code--dark">.col-2</code></div></div>
+      <div class="col-2 pl-1"><div class="py-1 cbgg-2"><code class="code--dark">.col-2</code></div></div>
+      <div class="col-2 pl-1"><div class="py-1 cbgg-2"><code class="code--dark">.col-2</code></div></div>
+    </div>
+    <div class="row mln-1 mtn-1 ta-center">
+      <div class="md-col-3 pl-1 mt-1"><div class="py-1 cbgg-2"><code class="code--dark">.md-col-3</code></div></div>
+      <div class="md-col-3 pl-1 mt-1"><div class="py-1 cbgg-2"><code class="code--dark">.md-col-3</code></div></div>
+      <div class="md-col-6 pl-1 mt-1"><div class="py-1 cbgg-2"><code class="code--dark">.md-col-6</code></div></div>
+    </div>
+  </div>
+  <div class="row cbgg-8 p-2 bt-thick-white">
+    <pre><code>&lt;div class="<span class="tw-bold">container</span>">
+  &lt;div class="<span class="tw-bold">clearfix</span>">
+    &lt;div class="<span class="tw-bold">col-2</span>">...&lt;/div>
+    &lt;div class="<span class="tw-bold">col-2</span>">...&lt;/div>
+    &lt;div class="<span class="tw-bold">col-2</span>">...&lt;/div>
+    &lt;div class="<span class="tw-bold">col-2</span>">...&lt;/div>
+    &lt;div class="<span class="tw-bold">col-2</span>">...&lt;/div>
+    &lt;div class="<span class="tw-bold">col-2</span>">...&lt;/div>
+    &lt;div class="<span class="tw-bold">col-2</span>">...&lt;/div>
+  &lt;/div>
+&lt;/div></code></pre>
+  </div>
+</section>
+
+<section class="container py-4" id="flexbox">
+
+  {% include section.html
+     heading="Flexbox"
+     body="Decent features an infinitely nestable grid based on percentage widths. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor."
+  %}
+
+  <div class="flex flex-wrap mln-1">
+    <div class="col-4 pl-1 mb-1">
+      <div class="flex items-start cbgg-8 p-2">
+        <div class="h-4 wp-100 cbgg-2"></div>
+        <div class="h-6 wp-100 cbgg-2 ml-1"></div>
+        <div class="h-5 wp-100 cbgg-2 ml-1"></div>
+      </div>
+      <div class="row cbgg-8 p-2 bt-thick-white">
+        <pre><code>&lt;div class="<span class="tw-bold">flex items-start</span>">
+  &lt;div>...&lt;/div>
+  &lt;div>...&lt;/div>
+  &lt;div>...&lt;/div>
+&lt;/div></code></pre>
+      </div>
+    </div>
+    <div class="col-4 pl-1 mb-1">
+      <div class="flex items-center cbgg-8 p-2">
+        <div class="h-4 wp-100 cbgg-2"></div>
+        <div class="h-6 wp-100 cbgg-2 ml-1"></div>
+        <div class="h-5 wp-100 cbgg-2 ml-1"></div>
+      </div>
+      <div class="row cbgg-8 p-2 bt-thick-white">
+        <pre><code>&lt;div class="<span class="tw-bold">flex items-center</span>">
+  &lt;div>...&lt;/div>
+  &lt;div>...&lt;/div>
+  &lt;div>...&lt;/div>
+&lt;/div></code></pre>
+      </div>
+    </div>
+    <div class="col-4 pl-1 mb-1">
+      <div class="flex items-end cbgg-8 p-2">
+        <div class="h-4 wp-100 cbgg-2"></div>
+        <div class="h-6 wp-100 cbgg-2 ml-1"></div>
+        <div class="h-5 wp-100 cbgg-2 ml-1"></div>
+      </div>
+      <div class="row cbgg-8 p-2 bt-thick-white">
+        <pre><code>&lt;div class="<span class="tw-bold">flex items-end</span>">
+  &lt;div>...&lt;/div>
+  &lt;div>...&lt;/div>
+  &lt;div>...&lt;/div>
+&lt;/div></code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container py-4" id="position">
+  {% include section.html
+     heading="Positioning"
+     body="Decent features an infinitely nestable grid based on percentage widths. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor."
+  %}
+
+  <div class="flex mln-1">
+    <div class="wp-100 pl-1 mb-2">
+      <div class="h-8 cbgg-8 relative">
+        <div class="wp-25 h-6 cbgg-2 m-1 absolute top-0 left-0"></div>
+        <div class="wp-25 h-6 cbgg-2 m-1 absolute top-0 right-0"></div>
+        <div class="wp-25 h-6 cbgg-2 m-1 absolute bottom-0 left-0"></div>
+        <div class="wp-25 h-6 cbgg-2 m-1 absolute bottom-0 right-0"></div>
+        <div class="wp-25 h-6 cbgg-2 m-1 absolute origin-center top-50 left-50"></div>
+      </div>
+      <div class="cbgg-8 p-2 bt-thick-white">
+        <pre><code>&lt;div class="<span class="tw-bold">relative</span>">
+  &lt;div class="<span class="tw-bold">absolute top-0 left-0</span>">...&lt;/div>
+  &lt;div class="<span class="tw-bold">absolute top-0 right-0</span>">...&lt;/div>
+  &lt;div class="<span class="tw-bold">absolute bottom-0 left-0</span>">...&lt;/div>
+  &lt;div class="<span class="tw-bold">absolute bottom-0 right-0</span>">...&lt;/div>
+  &lt;div class="<span class="tw-bold">absolute origin-center top-50 left-50</span>">...&lt;/div>
+&lt;/div></code></pre>
+      </div>
+    </div>
+    <!--
+    <div class="wp-100 pl-1">
+      <div class="ratio-16_9 cbgg-8 relative">
+        <div class="wp-40 hp-40 cbgg-2 m-1 absolute origin-center left-50 top-50"></div>
+      </div>
+      <div class="cbgg-8 p-2 bt-thick-white">
+        <pre><code>&lt;div class="<span class="tw-bold">relative</span>"></code></pre>
+      </div>
+    -->
+    </div>
+
+    <!--
+    <div class="wp-100 pl-1 mb-2">
+      <div class="ratio-16_9 cbgg-8 mb-1 relative">
+        <div class="wp-40 hp-40 cbgg-2 absolute origin-center top-50 left-50"></div>
+      </div>
+      <pre class="mb-2"><code class="code__single">.origin-center.top-50.left-50</code></pre>
+    </div>
+    -->
+  </div>
+</section>
+
+<section class="container py-4">
+  {% include section.html
+    heading="Lengths"
+    body="Decent features an infinitely nestable grid based on percentage widths. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor."
+  %}
+
+  <div class="p-2 cbgg-8 o-auto">
+    <div class="h-1 w-1 cbgg-2 mb-1"></div>
+    <div class="h-1 w-2 cbgg-2 mb-1"></div>
+    <div class="h-1 w-3 cbgg-2 mb-1"></div>
+    <div class="h-1 w-4 cbgg-2 mb-1"></div>
+    <div class="h-1 w-5 cbgg-2 mb-1"></div>
+    <div class="h-1 w-6 cbgg-2 mb-1"></div>
+    <div class="h-1 w-7 cbgg-2 mb-1"></div>
+    <div class="h-1 w-8 cbgg-2 mb-1"></div>
+    <div class="h-1 w-9 cbgg-2 mb-1"></div>
+    <div class="h-1 w-10 cbgg-2 mb-1"></div>
+    <div class="h-1 w-11 cbgg-2 mb-1"></div>
+  </div>
+  <div class="cbgg-8 p-2 bt-thick-white">
+    <pre><code>&lt;div class="<span class="tw-bold">relative</span>">
+  &lt;div class="<span class="tw-bold">w-1</span>"><span class="cg-5">&lt;!-- 0.6rem --></span>&lt;/div>
+  &lt;div class="<span class="tw-bold">w-2</span>">...&lt;/div>
+  &lt;div class="<span class="tw-bold">w-3</span>">...&lt;/div>
+  &lt;div class="<span class="tw-bold">w-4</span>">...&lt;/div>
+  &lt;div class="<span class="tw-bold">w-5</span>">...&lt;/div>
+  &lt;div class="<span class="tw-bold">w-6</span>">...&lt;/div>
+  &lt;div class="<span class="tw-bold">w-7</span>">...&lt;/div>
+  &lt;div class="<span class="tw-bold">w-8</span>">...&lt;/div>
+  &lt;div class="<span class="tw-bold">w-9</span>">...&lt;/div>
+  &lt;div class="<span class="tw-bold">w-10</span>">...&lt;/div>
+  &lt;div class="<span class="tw-bold">w-11</span>">...&lt;/div>
+&lt;/div></code></pre>
+  </div>
+</section>
+
+<section class="container py-4">
+  {% include section.html
+    heading="Spacing"
+    body="Decent features an infinitely nestable grid based on percentage widths. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor."
+  %}
+</section>
+
+<section class="container py-4">
+  {% include section.html
+    heading="Typography"
+    body="Decent features an infinitely nestable grid based on percentage widths. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor."
+  %}
+
+  <div class="flex mb-4">
+    <div class="wp-100 ml-1">
+      <div class="wp-100 cbgg-8 mb-1 flex items-baseline">
+        <pre class="w-6 tn-1 p-2"><code class="tw-bold">.t-10</code></pre>
+        <p class="t-10 pt-2 pl-2 pr-5 bl-thick-white">Lazy Fox</p>
+      </div>
+      <div class="wp-100 cbgg-8 mb-1 flex items-baseline">
+        <pre class="w-6 tn-1 p-2"><code class="tw-bold">.t-9</code></pre>
+        <p class="t-9 pt-2 pl-2 pr-5 bl-thick-white">Lazy Fox</p>
+      </div>
+      <div class="wp-100 cbgg-8 mb-1 flex items-baseline">
+        <pre class="w-6 tn-1 p-2"><code class="tw-bold">.t-8</code></pre>
+        <p class="t-8 pt-2 pl-2 pr-5 bl-thick-white">Lazy Fox</p>
+      </div>
+      <div class="wp-100 cbgg-8 mb-1 flex items-baseline">
+        <pre class="w-6 tn-1 p-2"><code class="tw-bold">.t-7</code></pre>
+        <p class="t-7 pt-2 pl-2 pr-5 bl-thick-white">Lazy Fox</p>
+      </div>
+      <div class="wp-100 cbgg-8 mb-1 flex items-baseline">
+        <pre class="w-6 tn-1 p-2"><code class="tw-bold">.t-6</code></pre>
+        <p class="t-6 pt-2 pl-2 pr-5 bl-thick-white">Lazy Fox</p>
+      </div>
+      <div class="wp-100 cbgg-8 mb-1 flex items-baseline">
+        <pre class="w-6 tn-1 p-2"><code class="tw-bold">.t-5</code></pre>
+        <p class="t-5 pt-2 pl-2 pr-5 bl-thick-white">Lazy Fox</p>
+      </div>
+      <div class="wp-100 cbgg-8 mb-1 flex items-baseline">
+        <pre class="w-6 tn-1 p-2"><code class="tw-bold">.t-4</code></pre>
+        <p class="t-4 pt-2 pl-2 pr-5 bl-thick-white">Lazy Fox</p>
+      </div>
+      <div class="wp-100 cbgg-8 mb-1 flex items-baseline">
+        <pre class="w-6 tn-1 p-2"><code class="tw-bold">.t-3</code></pre>
+        <p class="t-3 pt-2 pl-2 pr-5 bl-thick-white">Lazy Fox</p>
+      </div>
+      <div class="wp-100 cbgg-8 mb-1 flex items-baseline">
+        <pre class="w-6 tn-1 p-2"><code class="tw-bold">.t-2</code></pre>
+        <p class="t-2 pt-2 pl-2 pr-5 bl-thick-white">Lazy Fox</p>
+      </div>
+      <div class="wp-100 cbgg-8 mb-1 flex items-baseline">
+        <pre class="w-6 tn-1 p-2"><code class="tw-bold">.t-1</code></pre>
+        <p class="t-1 pt-2 pl-2 pr-5 bl-thick-white">Lazy Fox</p>
+      </div>
+      <div class="wp-100 mb-1 flex items-baseline">
+        <pre class="w-6 tn-1 p-2"><code class="tw-bold">.t-0</code></pre>
+        <p class="t-0 pt-2 pl-2 pr-5 bl-thick-white">Lazy Fox</p>
+      </div>
+      <div class="wp-100 cbgg-8 mb-1 flex items-baseline">
+        <pre class="w-6 tn-1 p-2"><code class="tw-bold">.tn-1</code></pre>
+        <p class="tn-1 pt-2 pl-2 pr-5 bl-thick-white">Lazy Fox</p>
+      </div>
+      <div class="wp-100 cbgg-8 mb-1 flex items-baseline">
+        <pre class="w-6 tn-1 p-2"><code class="tw-bold">.tn-2</code></pre>
+        <p class="tn-2 pt-2 pl-2 pr-5 bl-thick-white">Lazy Fox</p>
+      </div>
+      <div class="wp-100 cbgg-8 mb-1 flex items-baseline">
+        <pre class="w-6 tn-1 p-2"><code class="tw-bold">.tn-3</code></pre>
+        <p class="tn-3 pt-2 pl-2 pr-5 bl-thick-white">Lazy Fox</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex-grow cbgg-8 p-2 ml-1">
+    <p class="t-2 mb-2 underline">Underline</p>
+    <p class="t-2 mb-2 strikethrough">Strikethrough</p>
+    <p class="t-2 mb-2 uppercase tracked">Uppercase &amp; Tracked</p>
+    <p class="t-2 mb-2 italic">Italic</p>
+  </div>
+</section>
+
+<section class="container py-4">
+  {% include section.html
+    heading="Ratios"
+    body="Decent features an infinitely nestable grid based on percentage widths. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor."
+  %}
+
+  <div class="p-2 cbgg-8">
+    <div class="row mln-1">
+      <div class="col-2 pl-1">
+        <div class="ratio-1_2 cbgg-2 mb-1">
+          <div class="flex hp-100 wp-100 pt-2 justify-center"><pre><code class="code--dark">.ratio-1_2</code></pre></div>
+        </div>
+      </div>
+      <div class="col-2 pl-1">
+        <div class="ratio-iphone6 cbgg-2 mb-1">
+          <div class="flex hp-100 wp-100 pt-2 justify-center"><pre><code class="code--dark">.ratio-iphone6</code></pre></div>
+        </div>
+      </div>
+      <div class="col-2 pl-1">
+        <div class="ratio-1_1 cbgg-2 mb-1">
+          <div class="flex hp-100 wp-100 pt-2 justify-center"><pre><code class="code--dark">.ratio-1_1</code></pre></div>
+        </div>
+      </div>
+      <div class="col-2 pl-1">
+        <div class="ratio-4_3 cbgg-2 mb-1">
+          <div class="flex hp-100 wp-100 pt-2 justify-center"><pre><code class="code--dark">.ratio-4_3</code></pre></div>
+        </div>
+      </div>
+      <div class="col-2 pl-1">
+        <div class="ratio-5_3 cbgg-2 mb-1">
+          <div class="flex hp-100 wp-100 pt-2 justify-center"><pre><code class="code--dark">.ratio-5_3</code></pre></div>
+        </div>
+      </div>
+      <div class="col-2 pl-1">
+        <div class="ratio-16_9 cbgg-2 mb-1">
+          <div class="flex hp-100 wp-100 pt-2 justify-center"><pre><code class="code--dark">.ratio-16_9</code></pre></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container py-4">
+  {% include section.html
+    heading="Color"
+    body="Decent features an infinitely nestable grid based on percentage widths. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor."
+  %}
+
+  <div class="wp-100">
+    <div class="flex flex-grow p-2 cbgg-8">
+      <div class="h-5 wp-100 cbg-primary mr-1"></div>
+      <div class="h-5 wp-100 cbg-secondary mr-1"></div>
+      <div class="h-5 wp-100 cbg-success mr-1"></div>
+      <div class="h-5 wp-100 cbg-warning mr-1"></div>
+      <div class="h-5 wp-100 cbg-error mr-1"></div>
+    </div>
+    <div class="row cbgg-8 p-2 bt-thick-white mb-4">
+      <pre><code>&lt;div class="<span class="tw-bold">cbg-primary</span>">&lt;/div>
+&lt;div class="<span class="tw-bold">cbg-secondary</span>">&lt;/div>
+&lt;div class="<span class="tw-bold">cbg-success</span>">&lt;/div>
+&lt;div class="<span class="tw-bold">cbg-warning</span>">&lt;/div>
+&lt;div class="<span class="tw-bold">cbg-error</span>">&lt;/div></code></pre>
+    </div>
+
+    <div class="px-2 mb-2">
+      <h3 class="t-1">Shades</h3>
+    </div>
+    <div class="flex flex-grow p-2 cbgg-8">
+      <div class="h-5 wp-100 cbgg-1 mr-1"></div>
+      <div class="h-5 wp-100 cbgg-2 mr-1"></div>
+      <div class="h-5 wp-100 cbgg-3 mr-1"></div>
+      <div class="h-5 wp-100 cbgg-4 mr-1"></div>
+      <div class="h-5 wp-100 cbgg-5 mr-1"></div>
+      <div class="h-5 wp-100 cbgg-6 mr-1"></div>
+      <div class="h-5 wp-100 cbgg-7 mr-1"></div>
+    </div>
+    <div class="row cbgg-8 p-2 bt-thick-white mb-4">
+      <pre><code>&lt;div class="<span class="tw-bold">cbgg-1</span>">&lt;/div>
+&lt;div class="<span class="tw-bold">cbgg-2</span>">&lt;/div>
+&lt;div class="<span class="tw-bold">cbgg-3</span>">&lt;/div>
+&lt;div class="<span class="tw-bold">cbgg-4</span>">&lt;/div>
+&lt;div class="<span class="tw-bold">cbgg-5</span>">&lt;/div>
+&lt;div class="<span class="tw-bold">cbgg-6</span>">&lt;/div>
+&lt;div class="<span class="tw-bold">cbgg-7</span>">&lt;/div>
+&lt;div class="<span class="tw-bold">cbgg-8</span>">&lt;/div></code></pre>
+    </div>
+  </div>
+</section>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>

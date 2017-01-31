@@ -1,0 +1,7 @@
+task :build do
+  system("brunch build --production")
+end
+
+task :deploy => :build do
+  system("rsync -avz -e ssh public/ root@192.241.207.34:/var/www/decent/")
+end
