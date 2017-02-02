@@ -13,11 +13,10 @@ layout: default
     <a href="https://badge.fury.io/js/decent-scss">
       <img src="https://badge.fury.io/js/decent-scss.svg" />
     </a>
-    <a class="github-button" href="https://github.com/decent-scss/decent" data-count-href="/decent-scss/decent/stargazers" data-count-api="/repos/decent-scss/decent#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star decent-scss/decent on GitHub">Star</a>
-  </div>
+    <a class="github-button" href="https://github.com/decent-css/decent" data-count-href="/decent-css/decent/stargazers" data-count-api="/repos/decent-css/decent#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star decent-css/decent on GitHub">Star</a>  </div>
 </header>
 
-<section class="pt-8">
+<section class="pt-8 mb-5">
   <div class="container px-2">
     <div class="row bb-7">
       <div class="col-6">
@@ -36,7 +35,7 @@ layout: default
 </section>
 
 
-<section class="container pt-6 pb-5">
+<section class="container pb-5">
   {% include section.html
      heading="Getting Started"
      body="Includes something about settings."
@@ -54,12 +53,16 @@ layout: default
 
     <h3 class="t-1 tw-semibold mb-2 px-2">Import it into your Build</h3>
     <div class="row cbgg-8 p-2">
-      <pre><code>@import <span class="cg-5">path/to/decent-scss/</span>modules/all.scss</span>;</pre></code>
+      <pre><code><span class="cg-5">// Import settings before Decent modules.</span>
+@import 'settings';
+
+<span class="cg-5">// Then import Decent.</span>
+@import '<span class="cg-5">path/to/decent-scss/</span>modules/all'</span>;</pre></code>
     </div>
   </div>
 </section>
 
-<section class="container pt-6 pb-5">
+<section class="container pb-5">
 
   {% include section.html
      heading="Grid"
@@ -81,18 +84,26 @@ layout: default
       <div class="md-col-6 pl-1 mt-1"><div class="py-1 cbgg-2"><code class="code--dark">.md-col-6</code></div></div>
     </div>
   </div>
-  <div class="row cbgg-8 p-2 bt-thick-white">
-    <pre><code>&lt;div class="<span class="tw-bold">container</span>">
-  &lt;div class="<span class="tw-bold">clearfix</span>">
-    &lt;div class="<span class="tw-bold">col-2</span>">...&lt;/div>
-    &lt;div class="<span class="tw-bold">col-2</span>">...&lt;/div>
-    &lt;div class="<span class="tw-bold">col-2</span>">...&lt;/div>
-    &lt;div class="<span class="tw-bold">col-2</span>">...&lt;/div>
-    &lt;div class="<span class="tw-bold">col-2</span>">...&lt;/div>
-    &lt;div class="<span class="tw-bold">col-2</span>">...&lt;/div>
-    &lt;div class="<span class="tw-bold">col-2</span>">...&lt;/div>
-  &lt;/div>
-&lt;/div></code></pre>
+  <div class="flex">
+    <div class="wp-100 p-2">
+      <p class="tn-3 tracked uppercase mb-1 cg-4 antialiased">Markup</p>
+      <pre class="cbgg-8 p-2 wp-100"><code>&lt;div class="<span class="tw-bold">container</span>">
+    &lt;div class="<span class="tw-bold">clearfix</span>">
+      &lt;div class="<span class="tw-bold">col-2</span>">...&lt;/div>
+      &lt;div class="<span class="tw-bold">col-2</span>">...&lt;/div>
+      &lt;div class="<span class="tw-bold">col-2</span>">...&lt;/div>
+      &lt;div class="<span class="tw-bold">col-2</span>">...&lt;/div>
+      &lt;div class="<span class="tw-bold">col-2</span>">...&lt;/div>
+      &lt;div class="<span class="tw-bold">col-2</span>">...&lt;/div>
+      &lt;div class="<span class="tw-bold">col-2</span>">...&lt;/div>
+    &lt;/div>
+  &lt;/div></code></pre>
+    </div>
+    <div class="wp-100 p-2">
+      <p class="tn-3 tracked uppercase mb-1 cg-4 antialiased">Settings</p>
+      <pre class="cbgg-8 p-2 wp-100"><code>$container-width: 60rem;
+$columns: 60rem;</code></pre>
+</div>
   </div>
 </section>
 
@@ -110,8 +121,9 @@ layout: default
         <div class="h-6 wp-100 cbgg-2 ml-1"></div>
         <div class="h-5 wp-100 cbgg-2 ml-1"></div>
       </div>
-      <div class="row cbgg-8 p-2 bt-thick-white">
-        <pre><code>&lt;div class="<span class="tw-bold">flex items-start</span>">
+      <div class="row p-2">
+        <p class="tn-3 tracked uppercase mb-1 cg-4 antialiased">Markup</p>
+        <pre class="cbgg-8 wp-100 p-2"><code>&lt;div class="<span class="tw-bold">flex items-start</span>">
   &lt;div>...&lt;/div>
   &lt;div>...&lt;/div>
   &lt;div>...&lt;/div>
@@ -124,8 +136,9 @@ layout: default
         <div class="h-6 wp-100 cbgg-2 ml-1"></div>
         <div class="h-5 wp-100 cbgg-2 ml-1"></div>
       </div>
-      <div class="row cbgg-8 p-2 bt-thick-white">
-        <pre><code>&lt;div class="<span class="tw-bold">flex items-center</span>">
+      <div class="row p-2">
+        <p class="tn-3 tracked uppercase mb-1 cg-4 antialiased">Markup</p>
+        <pre class="cbgg-8 wp-100 p-2"><code>&lt;div class="<span class="tw-bold">flex items-center</span>">
   &lt;div>...&lt;/div>
   &lt;div>...&lt;/div>
   &lt;div>...&lt;/div>
@@ -138,8 +151,9 @@ layout: default
         <div class="h-6 wp-100 cbgg-2 ml-1"></div>
         <div class="h-5 wp-100 cbgg-2 ml-1"></div>
       </div>
-      <div class="row cbgg-8 p-2 bt-thick-white">
-        <pre><code>&lt;div class="<span class="tw-bold">flex items-end</span>">
+      <div class="row p-2">
+        <p class="tn-3 tracked uppercase mb-1 cg-4 antialiased">Markup</p>
+        <pre class="cbgg-8 wp-100 p-2"><code>&lt;div class="<span class="tw-bold">flex items-end</span>">
   &lt;div>...&lt;/div>
   &lt;div>...&lt;/div>
   &lt;div>...&lt;/div>
@@ -164,8 +178,9 @@ layout: default
         <div class="wp-20 h-5 cbgg-2 m-2 absolute bottom-0 right-0"></div>
         <div class="wp-20 h-5 cbgg-2 absolute origin-center top-50 left-50"></div>
       </div>
-      <div class="cbgg-8 p-2 bt-thick-white">
-        <pre><code>&lt;div class="<span class="tw-bold">relative</span>">
+      <div class="row p-2">
+        <p class="tn-3 tracked uppercase mb-1 cg-4 antialiased">Markup</p>
+        <pre class="cbgg-8 wp-100 p-2"><code>&lt;div class="<span class="tw-bold">relative</span>">
   &lt;div class="<span class="tw-bold">absolute top-0 left-0</span>">...&lt;/div>
   &lt;div class="<span class="tw-bold">absolute top-0 right-0</span>">...&lt;/div>
   &lt;div class="<span class="tw-bold">absolute bottom-0 left-0</span>">...&lt;/div>
@@ -215,20 +230,27 @@ layout: default
     <div class="h-1 w-10 cbgg-2 mb-1"></div>
     <div class="h-1 w-11 cbgg-2 mb-1"></div>
   </div>
-  <div class="cbgg-8 p-2 bt-thick-white">
-    <pre><code>&lt;div class="<span class="tw-bold">relative</span>">
-  &lt;div class="<span class="tw-bold">w-1</span>"><span class="cg-5">&lt;!-- 0.6rem --></span>&lt;/div>
-  &lt;div class="<span class="tw-bold">w-2</span>">...&lt;/div>
-  &lt;div class="<span class="tw-bold">w-3</span>">...&lt;/div>
-  &lt;div class="<span class="tw-bold">w-4</span>">...&lt;/div>
-  &lt;div class="<span class="tw-bold">w-5</span>">...&lt;/div>
-  &lt;div class="<span class="tw-bold">w-6</span>">...&lt;/div>
-  &lt;div class="<span class="tw-bold">w-7</span>">...&lt;/div>
-  &lt;div class="<span class="tw-bold">w-8</span>">...&lt;/div>
-  &lt;div class="<span class="tw-bold">w-9</span>">...&lt;/div>
-  &lt;div class="<span class="tw-bold">w-10</span>">...&lt;/div>
-  &lt;div class="<span class="tw-bold">w-11</span>">...&lt;/div>
-&lt;/div></code></pre>
+  <div class="flex">
+    <div class="wp-100 p-2">
+      <p class="tn-3 tracked uppercase mb-1 cg-4 antialiased">Markup</p>
+      <pre class="cbgg-8 wp-100 p-2"><code>&lt;div class="<span class="tw-bold">relative</span>">
+    &lt;div class="<span class="tw-bold">w-1</span>"><span class="cg-5">&lt;!-- 0.6rem --></span>&lt;/div>
+    &lt;div class="<span class="tw-bold">w-2</span>">...&lt;/div>
+    &lt;div class="<span class="tw-bold">w-3</span>">...&lt;/div>
+    &lt;div class="<span class="tw-bold">w-4</span>">...&lt;/div>
+    &lt;div class="<span class="tw-bold">w-5</span>">...&lt;/div>
+    &lt;div class="<span class="tw-bold">w-6</span>">...&lt;/div>
+    &lt;div class="<span class="tw-bold">w-7</span>">...&lt;/div>
+    &lt;div class="<span class="tw-bold">w-8</span>">...&lt;/div>
+    &lt;div class="<span class="tw-bold">w-9</span>">...&lt;/div>
+    &lt;div class="<span class="tw-bold">w-10</span>">...&lt;/div>
+    &lt;div class="<span class="tw-bold">w-11</span>">...&lt;/div>
+  &lt;/div></code></pre>
+    </div>
+    <div class="wp-100 p-2">
+      <p class="tn-3 tracked uppercase mb-1 cg-4 antialiased">Settings</p>
+      <pre class="cbgg-8 wp-100 p-2"><code>$length-increments: 0.8 1.6 2.2 2.6 4.2 6.8 11 18 29 46 75;</code></pre>
+    </div>
   </div>
 </section>
 
@@ -306,11 +328,35 @@ layout: default
     </div>
   </div>
 
-  <div class="flex-grow cbgg-8 p-2 ml-1">
-    <p class="t-2 mb-2 underline">Underline</p>
-    <p class="t-2 mb-2 strikethrough">Strikethrough</p>
-    <p class="t-2 mb-2 uppercase tracked">Uppercase &amp; Tracked</p>
-    <p class="t-2 mb-2 italic">Italic</p>
+  <div class="flex">
+    <div class="wp-100 pl-1">
+      <p class="ta-center cbgg-8 p-2 mb-1 underline">Underline</p>
+      <div class="wp-100 p-1">
+        <p class="tn-3 tracked uppercase mb-1 cg-4 antialiased">Markup</p>
+        <pre class="cbgg-8 wp-100 p-2"><code>&lt;p class="<span class="tw-bold">underline</span>">&lt;/p></code></pre>
+      </div>
+    </div>
+    <div class="wp-100 pl-1">
+      <p class="ta-center cbgg-8 p-2 mb-1 strikethrough">Strikethrough</p>
+      <div class="wp-100 p-1">
+        <p class="tn-3 tracked uppercase mb-1 cg-4 antialiased">Markup</p>
+        <pre class="cbgg-8 wp-100 p-2"><code>&lt;p class="<span class="tw-bold">strikethrough</span>">&lt;/p></code></pre>
+      </div>
+    </div>
+    <div class="wp-100 pl-1">
+      <p class="ta-center cbgg-8 p-2 mb-1 uppercase tracked">Uppercase &amp; Tracked</p>
+      <div class="wp-100 p-1">
+        <p class="tn-3 tracked uppercase mb-1 cg-4 antialiased">Markup</p>
+        <pre class="cbgg-8 wp-100 p-2"><code>&lt;p class="<span class="tw-bold">uppercase tracked</span>">&lt;/p></code></pre>
+      </div>
+    </div>
+    <div class="wp-100 pl-1">
+      <p class="ta-center cbgg-8 p-2 mb-1 italic">Italic</p>
+      <div class="wp-100 p-1">
+        <p class="tn-3 tracked uppercase mb-1 cg-4 antialiased">Markup</p>
+        <pre class="cbgg-8 wp-100 p-2"><code>&lt;p class="<span class="tw-bold">italic</span>">&lt;/p></code></pre>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -362,43 +408,49 @@ layout: default
     body="Decent features an infinitely nestable grid based on percentage widths. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor."
   %}
 
-  <div class="wp-100">
-    <div class="flex flex-grow p-2 cbgg-8">
-      <div class="h-5 wp-100 cbg-primary mr-1"></div>
-      <div class="h-5 wp-100 cbg-secondary mr-1"></div>
-      <div class="h-5 wp-100 cbg-success mr-1"></div>
-      <div class="h-5 wp-100 cbg-warning mr-1"></div>
-      <div class="h-5 wp-100 cbg-error mr-1"></div>
-    </div>
-    <div class="row cbgg-8 p-2 bt-thick-white mb-4">
-      <pre><code>&lt;div class="<span class="tw-bold">cbg-primary</span>">&lt;/div>
-&lt;div class="<span class="tw-bold">cbg-secondary</span>">&lt;/div>
-&lt;div class="<span class="tw-bold">cbg-success</span>">&lt;/div>
-&lt;div class="<span class="tw-bold">cbg-warning</span>">&lt;/div>
-&lt;div class="<span class="tw-bold">cbg-error</span>">&lt;/div></code></pre>
+  <div class="flex mln-2">
+
+    <div class="col-6 pl-2">
+      <div class="flex flex-wrap">
+        {% include blocks/color_swatch.html name="primary" %}
+        {% include blocks/color_swatch.html name="secondary" %}
+        {% include blocks/color_swatch.html name="success" %}
+        {% include blocks/color_swatch.html name="warning" %}
+        {% include blocks/color_swatch.html name="error" %}
+      </div>
+
+      <div class="wp-100 p-2">
+        <p class="tn-3 tracked uppercase mb-1 cg-4 antialiased">Settings</p>
+        <pre class="cbgg-8 wp-100 p-2"><code>$color-primary:   #3498db;
+$color-secondary: #34495e;
+$color-error:     #e74c3c;
+$color-warning:   #f39c12;
+$color-success:   #27ae60;
+
+$greys:           #1f232b
+                  lighten(#1f232b, 5%)
+                  lighten(#1f232b, 15%)
+                  lighten(#1f232b, 25%)
+                  lighten(#1f232b, 45%)
+                  lighten(#1f232b, 60%)
+                  lighten(#1f232b, 76%)
+                  lighten(#1f232b, 81%);</code></pre>
+      </div>
     </div>
 
-    <div class="px-2 mb-2">
-      <h3 class="t-1">Shades</h3>
-    </div>
-    <div class="flex flex-grow p-2 cbgg-8">
-      <div class="h-5 wp-100 cbgg-1 mr-1"></div>
-      <div class="h-5 wp-100 cbgg-2 mr-1"></div>
-      <div class="h-5 wp-100 cbgg-3 mr-1"></div>
-      <div class="h-5 wp-100 cbgg-4 mr-1"></div>
-      <div class="h-5 wp-100 cbgg-5 mr-1"></div>
-      <div class="h-5 wp-100 cbgg-6 mr-1"></div>
-      <div class="h-5 wp-100 cbgg-7 mr-1"></div>
-    </div>
-    <div class="row cbgg-8 p-2 bt-thick-white mb-4">
-      <pre><code>&lt;div class="<span class="tw-bold">cbgg-1</span>">&lt;/div>
-&lt;div class="<span class="tw-bold">cbgg-2</span>">&lt;/div>
-&lt;div class="<span class="tw-bold">cbgg-3</span>">&lt;/div>
-&lt;div class="<span class="tw-bold">cbgg-4</span>">&lt;/div>
-&lt;div class="<span class="tw-bold">cbgg-5</span>">&lt;/div>
-&lt;div class="<span class="tw-bold">cbgg-6</span>">&lt;/div>
-&lt;div class="<span class="tw-bold">cbgg-7</span>">&lt;/div>
-&lt;div class="<span class="tw-bold">cbgg-8</span>">&lt;/div></code></pre>
+    <div class="col-6 pl-2">
+      <div class="flex flex-wrap">
+        {% include blocks/color_swatch.html name="black" %}
+        {% include blocks/color_swatch.html name="1" grey="true" %}
+        {% include blocks/color_swatch.html name="2" grey="true" %}
+        {% include blocks/color_swatch.html name="3" grey="true" %}
+        {% include blocks/color_swatch.html name="4" grey="true" %}
+        {% include blocks/color_swatch.html name="5" grey="true" %}
+        {% include blocks/color_swatch.html name="6" grey="true" %}
+        {% include blocks/color_swatch.html name="7" grey="true" %}
+        {% include blocks/color_swatch.html name="8" grey="true" %}
+        {% include blocks/color_swatch.html name="white" %}
+      </div>
     </div>
   </div>
 </section>
