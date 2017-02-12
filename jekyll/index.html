@@ -19,7 +19,7 @@ layout: default
 <section class="pt-8 mb-5">
   <div class="container px-2">
     <div class="row bb-7">
-      <div class="col-6">
+      <div class="md-col-6">
         <p class="t-4 tw-semibold mb-2">This is Functional CSS – f(scss).</p>
         <p class="t-1 pb-4">Alternatively refered to as <i>Utility Classes</i>, the term <i>Functional CSS</i> came about as we found that we could use this method to develop entire websites and applications.</p>
       </div>
@@ -35,10 +35,10 @@ layout: default
 </section>
 
 
-<section class="container pb-5">
+<section class="container pb-5 px-1 px-1">
   {% include section.html
      heading="Getting Started"
-     body="Includes something about settings."
+     body="Our goal with Decent is to provide a functional CSS library that makes no assumption about your design. It works best when built into your asset compliation, allowing you to utilize the settings and configure the classes to meet your exact needs."
   %}
 
   <h3 class="t-1 tw-semibold mb-2 px-2">Install Decent</h3>
@@ -47,8 +47,8 @@ layout: default
       <pre><code>$ npm install decent-scss</pre></code>
     </div>
     <div class="row p-2 mb-2">
-      <p class="tn-1 mb-1">or</p>
-      <a href="https://github.com/decent-css/decent/archive/master.zip" class="tn-1 c-black tw-semibold uppercase tracked p-1 mln-1">Download the Source</a>
+      <p class="tn-1 mb-1">or if you're not using NPM in your project:</p>
+      <a href="https://github.com/decent-css/decent/archive/master.zip" class="tn-1 c-black tw-semibold uppercase tracked underline p-1 mln-1">Download the Source</a>
     </div>
 
     <h3 class="t-1 tw-semibold mb-2 px-2">Import it into your Build</h3>
@@ -62,11 +62,11 @@ layout: default
   </div>
 </section>
 
-<section class="container pb-5">
+<section class="container pb-5 px-1">
 
   {% include section.html
      heading="Grid"
-     body="Decent features an infinitely nestable grid based on percentage widths. Grid classes can be used in both a float-style grid and within flexbox containers."
+     body="Decent features a flexible and infinitely nestable grid based on percentage widths. Grid classes can be used in both a float-style grid and within flexbox containers."
   %}
 
   <div class="row cbgg-8 p-2">
@@ -83,31 +83,40 @@ layout: default
       <div class="md-col-3 pl-1 mt-1"><div class="py-1 cbgg-2"><code class="code--dark">.md-col-3</code></div></div>
       <div class="md-col-6 pl-1 mt-1"><div class="py-1 cbgg-2"><code class="code--dark">.md-col-6</code></div></div>
     </div>
-  </div>
-  <div class="flex">
-    <div class="wp-100 p-2">
-      <p class="tn-3 tracked uppercase mb-1 cg-4 antialiased">Markup</p>
-      <pre class="cbgg-8 p-2 wp-100"><code>&lt;div class="<span class="tw-bold">container</span>">
-    &lt;div class="<span class="tw-bold">clearfix</span>">
-      &lt;div class="<span class="tw-bold">col-2</span>">...&lt;/div>
-      &lt;div class="<span class="tw-bold">col-2</span>">...&lt;/div>
-      &lt;div class="<span class="tw-bold">col-2</span>">...&lt;/div>
-      &lt;div class="<span class="tw-bold">col-2</span>">...&lt;/div>
-      &lt;div class="<span class="tw-bold">col-2</span>">...&lt;/div>
-      &lt;div class="<span class="tw-bold">col-2</span>">...&lt;/div>
-      &lt;div class="<span class="tw-bold">col-2</span>">...&lt;/div>
-    &lt;/div>
-  &lt;/div></code></pre>
+    <div class="row mln-1 mtn-1 ta-center">
+      <div class="lg-col-8 lg-push-2 pl-1 mt-1"><div class="py-1 cbgg-2"><code class="code--dark">.lg-col-6.lg-push-2</code></div></div>
     </div>
-    <div class="wp-100 p-2">
-      <p class="tn-3 tracked uppercase mb-1 cg-4 antialiased">Settings</p>
-      <pre class="cbgg-8 p-2 wp-100"><code>$container-width: 60rem;
-$columns: 60rem;</code></pre>
-</div>
   </div>
+
+  {% include snippet.html
+    markup='<div class="container">
+  <div class="clearfix">
+    <div class="col-2">...</div>
+    <div class="col-2">...</div>
+    <div class="col-2">...</div>
+    <div class="col-2">...</div>
+    <div class="col-2">...</div>
+    <div class="col-2">...</div>
+    <div class="col-2">...</div>
+  </div>
+
+  <div class="clearfix">
+    <div class="md-col-3">...</div>
+    <div class="md-col-3">...</div>
+    <div class="md-col-6">...</div>
+  </div>
+
+  <div class="clearfix">
+    <div class="lg-col-8 lg-push-2">...</div>
+  </div>
+</div>'
+    settings='$container-width: 60rem;
+      $columns: 60rem;
+    '
+  %}
 </section>
 
-<section class="container py-4" id="flexbox">
+<section class="container py-4 px-1" id="flexbox">
 
   {% include section.html
      heading="Flexbox"
@@ -163,7 +172,7 @@ $columns: 60rem;</code></pre>
   </div>
 </section>
 
-<section class="container py-4" id="position">
+<section class="container py-4 px-1" id="position">
   {% include section.html
      heading="Positioning"
      body="Decent features an infinitely nestable grid based on percentage widths. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor."
@@ -211,10 +220,10 @@ $columns: 60rem;</code></pre>
   </div>
 </section>
 
-<section class="container py-4">
+<section class="container py-4 px-1">
   {% include section.html
     heading="Lengths"
-    body="Decent features an infinitely nestable grid based on percentage widths. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor."
+    body="The lengths module provides fixed, percentage, min, and max widths and heights. The classes are configuragble by a SCSS variable list to allow for an infinite number of increments – though we recommend limiting the number of increments to about 10 based off a <a href='//www.modularscale.com/'>modular scale</a>."
   %}
 
   <div class="p-2 cbgg-8 o-auto">
@@ -234,17 +243,17 @@ $columns: 60rem;</code></pre>
     <div class="wp-100 p-2">
       <p class="tn-3 tracked uppercase mb-1 cg-4 antialiased">Markup</p>
       <pre class="cbgg-8 wp-100 p-2"><code>&lt;div class="<span class="tw-bold">relative</span>">
-    &lt;div class="<span class="tw-bold">w-1</span>"><span class="cg-5">&lt;!-- 0.6rem --></span>&lt;/div>
-    &lt;div class="<span class="tw-bold">w-2</span>">...&lt;/div>
-    &lt;div class="<span class="tw-bold">w-3</span>">...&lt;/div>
-    &lt;div class="<span class="tw-bold">w-4</span>">...&lt;/div>
-    &lt;div class="<span class="tw-bold">w-5</span>">...&lt;/div>
-    &lt;div class="<span class="tw-bold">w-6</span>">...&lt;/div>
-    &lt;div class="<span class="tw-bold">w-7</span>">...&lt;/div>
-    &lt;div class="<span class="tw-bold">w-8</span>">...&lt;/div>
-    &lt;div class="<span class="tw-bold">w-9</span>">...&lt;/div>
-    &lt;div class="<span class="tw-bold">w-10</span>">...&lt;/div>
-    &lt;div class="<span class="tw-bold">w-11</span>">...&lt;/div>
+    &lt;div class="<span class="tw-bold">w-1</span>"><span class="cg-5">  &lt;!-- 0.8rem --></span> &lt;/div>
+    &lt;div class="<span class="tw-bold">w-2</span>"><span class="cg-5">  &lt;!-- 1.6rem --></span> &lt;/div>
+    &lt;div class="<span class="tw-bold">w-3</span>"><span class="cg-5">  &lt;!-- 2.2rem --></span> &lt;/div>
+    &lt;div class="<span class="tw-bold">w-4</span>"><span class="cg-5">  &lt;!-- 2.6rem --></span> &lt;/div>
+    &lt;div class="<span class="tw-bold">w-5</span>"><span class="cg-5">  &lt;!-- 4.2rem --></span> &lt;/div>
+    &lt;div class="<span class="tw-bold">w-6</span>"><span class="cg-5">  &lt;!-- 6.8rem --></span> &lt;/div>
+    &lt;div class="<span class="tw-bold">w-7</span>"><span class="cg-5">  &lt;!--  11rem --></span> &lt;/div>
+    &lt;div class="<span class="tw-bold">w-8</span>"><span class="cg-5">  &lt;!--  18rem --></span> &lt;/div>
+    &lt;div class="<span class="tw-bold">w-9</span>"><span class="cg-5">  &lt;!--  29rem --></span> &lt;/div>
+    &lt;div class="<span class="tw-bold">w-10</span>"><span class="cg-5"> &lt;!--  46rem --></span> &lt;/div>
+    &lt;div class="<span class="tw-bold">w-11</span>"><span class="cg-5"> &lt;!--  75rem --></span> &lt;/div>
   &lt;/div></code></pre>
     </div>
     <div class="wp-100 p-2">
@@ -254,17 +263,17 @@ $columns: 60rem;</code></pre>
   </div>
 </section>
 
-<section class="container py-4">
+<section class="container py-4 px-1">
   {% include section.html
     heading="Spacing"
-    body="Decent features an infinitely nestable grid based on percentage widths. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor."
+    body="Similar to lengths, spacing can be configured by a single SASS variable list that we recommend basing off a <a href='//www.modularscale.com/'>modular scale</a>. Having pre-built classes of increments makes adding spacing both easy and consistent – ending the endless arbitrary margin and padding values that inevitably end up in stylesheets."
   %}
 </section>
 
-<section class="container py-4">
+<section class="container py-4 px-1">
   {% include section.html
     heading="Typography"
-    body="Decent features an infinitely nestable grid based on percentage widths. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor."
+    body=""
   %}
 
   <div class="flex mb-4">
@@ -309,7 +318,7 @@ $columns: 60rem;</code></pre>
         <pre class="w-6 tn-1 py-1 px-2"><code class="tw-bold">.t-1</code></pre>
         <p class="t-1 pt-2 pl-2 pb-1 pr-5 bl-thick-white">Lazy Fox</p>
       </div>
-      <div class="wp-100 mb-1 flex items-baseline">
+      <div class="wp-100 cbgg-4 c-white antialiased mb-1 flex items-baseline">
         <pre class="w-6 tn-1 py-1 px-2"><code class="tw-bold">.t-0</code></pre>
         <p class="t-0 pt-2 pl-2 pb-1 pr-5 bl-thick-white">Lazy Fox</p>
       </div>
@@ -360,7 +369,7 @@ $columns: 60rem;</code></pre>
   </div>
 </section>
 
-<section class="container py-4">
+<section class="container py-4 px-1">
   {% include section.html
     heading="Ratios"
     body="Decent features an infinitely nestable grid based on percentage widths. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor."
@@ -402,7 +411,7 @@ $columns: 60rem;</code></pre>
   </div>
 </section>
 
-<section class="container py-4">
+<section class="container py-4 px-1">
   {% include section.html
     heading="Color"
     body="Decent features an infinitely nestable grid based on percentage widths. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor."
