@@ -1,13 +1,16 @@
-<div class="flex flex-wrap">
-  <div class="wp-100 md-wp-50 px-1 py-2">
-    <p class="tn-3 tracked uppercase mb-1 cg-4 antialiased">Markup</p>
-    <pre class="cbgg-8 p-2 wp-100 o-auto"><code>{% highlight html %}{{ include.markup }}{% endhighlight %}</code></pre>
-  </div>
-  <div class="wp-100 md-wp-50 px-1 py-2">
-    <p class="tn-3 tracked uppercase mb-1 cg-4 antialiased">Settings</p>
-    <pre class="cbgg-8 p-2 wp-100"><code>$container-width: 60rem;
-$columns: 60rem;</code></pre>
-  </div>
+<div class="flex flex-wrap md-flex-nowrap">
+  {% if include.markup %}
+    <div class="wp-100 md-w-auto px-1 py-2">
+      <p class="tn-3 tracked uppercase mb-1 cg-4 antialiased">Markup</p>
+      <pre class="cbgg-8 p-2 wp-100 o-auto"><code>{% highlight html %}{{ include.markup }}{% endhighlight %}</code></pre>
+    </div>
+  {% endif %}
+  {% if include.settings %}
+    <div class="wp-100 md-w-auto px-1 py-2">
+      <p class="tn-3 tracked uppercase mb-1 cg-4 antialiased">Settings</p>
+      <pre class="cbgg-8 p-2 wp-100"><code>{% highlight scss %}{{ include.settings }}{% endhighlight %}</code></pre>
+    </div>
+  {% endif %}
 </div>
 
 <!-- <div class="flex flex-wrap">

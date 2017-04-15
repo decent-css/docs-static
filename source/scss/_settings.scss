@@ -12,11 +12,11 @@ $default-border-color:  lighten(#000, 24%);
 $default-border-radius: 2px;
 $thick-border-weight:   6px;
 
-$color-primary:    #3498db;
-$color-secondary:  #34495e;
-$color-error:      #e74c3c;
-$color-warning:    #f39c12;
-$color-success:    #27ae60;
+$color-primary:    #3498db lighten(#3498db, 10%) lighten(#3498db, 20%);
+$color-secondary:  #34495e lighten(#34495e, 10%) lighten(#34495e, 20%);
+$color-error:      #e74c3c lighten(#e74c3c, 10%) lighten(#e74c3c, 20%);
+$color-warning:    #f39c12 lighten(#f39c12, 10%) lighten(#f39c12, 20%);
+$color-success:    #27ae60 lighten(#27ae60, 10%) lighten(#27ae60, 20%);
 
 $greys:            #1f232b lighten(#1f232b, 5%) lighten(#1f232b, 15%) lighten(#1f232b, 25%) lighten(#1f232b, 45%) lighten(#1f232b, 60%) lighten(#1f232b, 76%) lighten(#1f232b, 81%);
 

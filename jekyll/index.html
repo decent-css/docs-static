@@ -6,7 +6,7 @@ layout: default
   <div class="container py-3 px-2">
     <div class="mb-3">
       <div class="flex h-3 mb-2">
-        <img src="/assets/decent-logo.svg" class="hp-100" /><super class="tn-1">&trade;</super>
+        <img src="/assets/decent-logo.svg" class="hp-100" />
       </div>
       <p class="tn-2 cg-4 uppercase tracked">A Functional CSS Library</p>
     </div>
@@ -18,7 +18,7 @@ layout: default
 
 <section class="pt-8 mb-5">
   <div class="container px-2">
-    <div class="row bb-7">
+    <div class="clearfix bb-7">
       <div class="md-col-6">
         <p class="t-4 tw-semibold mb-2">This is Functional CSS – f(scss).</p>
         <p class="t-1 pb-4">Alternatively refered to as <i>Utility Classes</i>, the term <i>Functional CSS</i> came about as we found that we could use this method to develop entire websites and applications.</p>
@@ -43,34 +43,49 @@ layout: default
 
   <h3 class="t-1 tw-semibold mb-2 px-2">Install Decent</h3>
   <div class="md-col-6">
-    <div class="row cbgg-8 p-2 ">
+    <div class="clearfix cbgg-8 p-2 ">
       <pre><code>$ npm install decent-scss</pre></code>
     </div>
-    <div class="row p-2 mb-2">
+    <div class="clearfix p-2 mb-2">
       <p class="tn-1 mb-1">or if you're not using NPM in your project:</p>
       <a href="https://github.com/decent-css/decent/archive/master.zip" class="tn-1 c-black tw-semibold uppercase tracked underline p-1 mln-1">Download the Source</a>
     </div>
 
     <h3 class="t-1 tw-semibold mb-2 px-2">Import it into your Build</h3>
-    <div class="row cbgg-8 p-2">
-      <pre><code><span class="cg-5">// Import settings before Decent modules.</span>
+    <div class="clearfix cbgg-8 p-2">
+      <pre><code><span class="cg-5">// Import settings before Decent modules.
+// * This is optional as each module has its default settings defined.</span>
 @import 'settings';
 
-<span class="cg-5">// Then import Decent.</span>
-@import '<span class="cg-5">path/to/decent-scss/</span>modules/all'</span>;</pre></code>
+<span class="cg-5">// Then import all the Decent modules.</span>
+@import '<span class="cg-5">path/to/decent-scss/</span>modules/all'</span>;
+
+<span class="cg-5">// Or, import each module individually.</span>
+@import '<span class="cg-5">path/to/decent-scss/</span>modules/color'</span>;
+@import '<span class="cg-5">path/to/decent-scss/</span>modules/display'</span>;
+@import '<span class="cg-5">path/to/decent-scss/</span>modules/flex'</span>;
+@import '<span class="cg-5">path/to/decent-scss/</span>modules/floats'</span>;
+@import '<span class="cg-5">path/to/decent-scss/</span>modules/grid'</span>;
+@import '<span class="cg-5">path/to/decent-scss/</span>modules/interaction'</span>;
+@import '<span class="cg-5">path/to/decent-scss/</span>modules/lengths'</span>;
+@import '<span class="cg-5">path/to/decent-scss/</span>modules/overlay'</span>;
+@import '<span class="cg-5">path/to/decent-scss/</span>modules/position'</span>;
+@import '<span class="cg-5">path/to/decent-scss/</span>modules/reset'</span>;
+@import '<span class="cg-5">path/to/decent-scss/</span>modules/spacing'</span>;
+@import '<span class="cg-5">path/to/decent-scss/</span>modules/style'</span>;
+@import '<span class="cg-5">path/to/decent-scss/</span>modules/table'</span>;
+@import '<span class="cg-5">path/to/decent-scss/</span>modules/type'</span>;</pre></code>
     </div>
   </div>
 </section>
 
 <section class="container pb-5 px-1">
-
   {% include section.html
      heading="Grid"
      body="Decent features a flexible and infinitely nestable grid based on percentage widths. Grid classes can be used in both a float-style grid and within flexbox containers."
   %}
-
-  <div class="row cbgg-8 p-2">
-    <div class="row ta-center mb-1 mln-1">
+  <div class="clearfix cbgg-8 p-2">
+    <div class="clearfix ta-center mb-1 mln-1">
       <div class="col-2 pl-1"><div class="py-1 cbgg-2"><code class="code--dark">.col-2</code></div></div>
       <div class="col-2 pl-1"><div class="py-1 cbgg-2"><code class="code--dark">.col-2</code></div></div>
       <div class="col-2 pl-1"><div class="py-1 cbgg-2"><code class="code--dark">.col-2</code></div></div>
@@ -78,12 +93,12 @@ layout: default
       <div class="col-2 pl-1"><div class="py-1 cbgg-2"><code class="code--dark">.col-2</code></div></div>
       <div class="col-2 pl-1"><div class="py-1 cbgg-2"><code class="code--dark">.col-2</code></div></div>
     </div>
-    <div class="row mln-1 mtn-1 ta-center">
+    <div class="clearfix mln-1 mtn-1 ta-center">
       <div class="md-col-3 pl-1 mt-1"><div class="py-1 cbgg-2"><code class="code--dark">.md-col-3</code></div></div>
       <div class="md-col-3 pl-1 mt-1"><div class="py-1 cbgg-2"><code class="code--dark">.md-col-3</code></div></div>
       <div class="md-col-6 pl-1 mt-1"><div class="py-1 cbgg-2"><code class="code--dark">.md-col-6</code></div></div>
     </div>
-    <div class="row mln-1 mtn-1 ta-center">
+    <div class="clearfix mln-1 mtn-1 ta-center">
       <div class="lg-col-8 lg-push-2 pl-1 mt-1"><div class="py-1 cbgg-2"><code class="code--dark">.lg-col-6.lg-push-2</code></div></div>
     </div>
   </div>
@@ -111,12 +126,11 @@ layout: default
   </div>
 </div>'
     settings='$container-width: 60rem;
-      $columns: 60rem;
-    '
+$columns: 60rem;'
   %}
 </section>
 
-<section class="container py-4 px-1" id="flexbox">
+<section class="container pb-5 px-1" id="flexbox">
 
   {% include section.html
      heading="Flexbox"
@@ -130,7 +144,7 @@ layout: default
         <div class="h-6 wp-100 cbgg-2 ml-1"></div>
         <div class="h-5 wp-100 cbgg-2 ml-1"></div>
       </div>
-      <div class="row p-2">
+      <div class="clearfix p-2">
         <p class="tn-3 tracked uppercase mb-1 cg-4 antialiased">Markup</p>
         <pre class="cbgg-8 wp-100 p-2"><code>&lt;div class="<span class="tw-bold">flex items-start</span>">
   &lt;div>...&lt;/div>
@@ -145,7 +159,7 @@ layout: default
         <div class="h-6 wp-100 cbgg-2 ml-1"></div>
         <div class="h-5 wp-100 cbgg-2 ml-1"></div>
       </div>
-      <div class="row p-2">
+      <div class="clearfix p-2">
         <p class="tn-3 tracked uppercase mb-1 cg-4 antialiased">Markup</p>
         <pre class="cbgg-8 wp-100 p-2"><code>&lt;div class="<span class="tw-bold">flex items-center</span>">
   &lt;div>...&lt;/div>
@@ -160,7 +174,7 @@ layout: default
         <div class="h-6 wp-100 cbgg-2 ml-1"></div>
         <div class="h-5 wp-100 cbgg-2 ml-1"></div>
       </div>
-      <div class="row p-2">
+      <div class="clearfix p-2">
         <p class="tn-3 tracked uppercase mb-1 cg-4 antialiased">Markup</p>
         <pre class="cbgg-8 wp-100 p-2"><code>&lt;div class="<span class="tw-bold">flex items-end</span>">
   &lt;div>...&lt;/div>
@@ -172,7 +186,7 @@ layout: default
   </div>
 </section>
 
-<section class="container py-4 px-1" id="position">
+<section class="container pb-5 px-1" id="position">
   {% include section.html
      heading="Positioning"
      body="Decent features an infinitely nestable grid based on percentage widths. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor."
@@ -187,7 +201,7 @@ layout: default
         <div class="wp-20 h-5 cbgg-2 m-2 absolute bottom-0 right-0"></div>
         <div class="wp-20 h-5 cbgg-2 absolute origin-center top-50 left-50"></div>
       </div>
-      <div class="row p-2">
+      <div class="clearfix p-2">
         <p class="tn-3 tracked uppercase mb-1 cg-4 antialiased">Markup</p>
         <pre class="cbgg-8 wp-100 p-2"><code>&lt;div class="<span class="tw-bold">relative</span>">
   &lt;div class="<span class="tw-bold">absolute top-0 left-0</span>">...&lt;/div>
@@ -220,7 +234,7 @@ layout: default
   </div>
 </section>
 
-<section class="container py-4 px-1">
+<section class="container pb-5 px-1">
   {% include section.html
     heading="Lengths"
     body="The lengths module provides fixed, percentage, min, and max widths and heights. The classes are configuragble by a SCSS variable list to allow for an infinite number of increments – though we recommend limiting the number of increments to about 10 based off a <a href='//www.modularscale.com/'>modular scale</a>."
@@ -263,20 +277,20 @@ layout: default
   </div>
 </section>
 
-<section class="container py-4 px-1">
+<section class="container pb-5 px-1">
   {% include section.html
     heading="Spacing"
     body="Similar to lengths, spacing can be configured by a single SASS variable list that we recommend basing off a <a href='//www.modularscale.com/'>modular scale</a>. Having pre-built classes of increments makes adding spacing both easy and consistent – ending the endless arbitrary margin and padding values that inevitably end up in stylesheets."
   %}
 </section>
 
-<section class="container py-4 px-1">
+<section class="container pb-5 px-1">
   {% include section.html
     heading="Typography"
     body=""
   %}
 
-  <div class="flex mb-4">
+  <div class="flex mb-4 mln-1">
     <div class="wp-100 ml-1">
       <div class="wp-100 cbgg-8 mb-1 flex items-baseline">
         <pre class="w-6 tn-1 py-1 px-2"><code class="tw-bold">.t-10</code></pre>
@@ -318,7 +332,7 @@ layout: default
         <pre class="w-6 tn-1 py-1 px-2"><code class="tw-bold">.t-1</code></pre>
         <p class="t-1 pt-2 pl-2 pb-1 pr-5 bl-thick-white">Lazy Fox</p>
       </div>
-      <div class="wp-100 cbgg-4 c-white antialiased mb-1 flex items-baseline">
+      <div class="wp-100 cbgg-4 cg-white antialiased mb-1 flex items-baseline">
         <pre class="w-6 tn-1 py-1 px-2"><code class="tw-bold">.t-0</code></pre>
         <p class="t-0 pt-2 pl-2 pb-1 pr-5 bl-thick-white">Lazy Fox</p>
       </div>
@@ -337,7 +351,7 @@ layout: default
     </div>
   </div>
 
-  <div class="flex">
+  <div class="flex mln-1">
     <div class="wp-100 pl-1">
       <p class="ta-center cbgg-8 p-2 mb-1 underline">Underline</p>
       <div class="wp-100 p-1">
@@ -367,24 +381,122 @@ layout: default
       </div>
     </div>
   </div>
+
+  <div class="wp-100">
+    {% include snippet.html
+      settings="$rem-base:                16px;
+$ratio:                   1.5;
+
+$default-type-family:     'Proxima Nova', serif;
+$default-type-weight:     400;
+$default-type-color:      #010101;
+$default-line-height:     1.5;
+$default-type-tracking:   0;
+
+$display-type-family:     'Soleil', 'Helvetica', sans-serif;
+$display-type-transform:  uppercase;
+$display-type-tracking:   0.1em;
+$display-type-weight:     700;
+$display-line-height:     1.2;
+
+$tw-extra-light:          100;
+$tw-light:                200;
+$tw-regular:              300;
+$tw-medium:               400;
+$tw-semibold:             500;
+$tw-bold:                 600;
+      "
+    %}
+  </div>
 </section>
 
-<section class="container py-4 px-1">
+<section class="container pb-5 px-1">
   {% include section.html
-    heading="Ratios"
+    heading="Color"
+    body="Decent features an infinitely nestable grid based on percentage widths. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor."
+  %}
+
+  <div class="flex mln-2">
+    <div class="col-6 pl-2">
+      <div class="flex flex-wrap mb-1">
+        {% include blocks/color_swatch.html name="primary" %}
+        {% include blocks/color_swatch.html name="primary-alt-1" %}
+        {% include blocks/color_swatch.html name="primary-alt-2" %}
+      </div>
+      <div class="flex flex-wrap mb-1">
+        {% include blocks/color_swatch.html name="secondary" %}
+        {% include blocks/color_swatch.html name="secondary-alt-1" %}
+        {% include blocks/color_swatch.html name="secondary-alt-2" %}
+      </div>
+      <div class="flex flex-wrap mb-1">
+        {% include blocks/color_swatch.html name="success" %}
+        {% include blocks/color_swatch.html name="success-alt-1" %}
+        {% include blocks/color_swatch.html name="success-alt-2" %}
+      </div>
+      <div class="flex flex-wrap mb-1">
+        {% include blocks/color_swatch.html name="warning" %}
+        {% include blocks/color_swatch.html name="warning-alt-1" %}
+        {% include blocks/color_swatch.html name="warning-alt-2" %}
+      </div>
+      <div class="flex flex-wrap mb-1">
+        {% include blocks/color_swatch.html name="error" %}
+        {% include blocks/color_swatch.html name="error-alt-1" %}
+        {% include blocks/color_swatch.html name="error-alt-2" %}
+      </div>
+    </div>
+
+    <div class="col-6 pl-2">
+      <div class="flex flex-wrap">
+        {% include blocks/color_swatch.html name="black" grey="true" %}
+        {% include blocks/color_swatch.html name="1" grey="true" %}
+        {% include blocks/color_swatch.html name="2" grey="true" %}
+        {% include blocks/color_swatch.html name="3" grey="true" %}
+        {% include blocks/color_swatch.html name="4" grey="true" %}
+        {% include blocks/color_swatch.html name="5" grey="true" %}
+        {% include blocks/color_swatch.html name="6" grey="true" %}
+        {% include blocks/color_swatch.html name="7" grey="true" %}
+        {% include blocks/color_swatch.html name="8" grey="true" %}
+        {% include blocks/color_swatch.html name="white" grey="true" %}
+      </div>
+    </div>
+  </div>
+  <div class="wp-100 p-2">
+    <p class="tn-3 tracked uppercase mb-1 cg-4 antialiased">Settings</p>
+    <pre class="cbgg-8 wp-100 p-2"><code>$color-primary:    #3498db lighten(#3498db, 10%) lighten(#3498db, 20%);
+$color-secondary:  #34495e lighten(#34495e, 10%) lighten(#34495e, 20%);
+$color-error:      #e74c3c lighten(#e74c3c, 10%) lighten(#e74c3c, 20%);
+$color-warning:    #f39c12 lighten(#f39c12, 10%) lighten(#f39c12, 20%);
+$color-success:    #27ae60 lighten(#27ae60, 10%) lighten(#27ae60, 20%);
+
+$black:            #000;
+$white:            #fff;
+$greys:            #1f232b
+                   lighten(#1f232b, 5%)
+                   lighten(#1f232b, 15%)
+                   lighten(#1f232b, 25%)
+                   lighten(#1f232b, 45%)
+                   lighten(#1f232b, 60%)
+                   lighten(#1f232b, 76%)
+                   lighten(#1f232b, 81%);</code></pre>
+  </div>
+</section>
+
+<section class="container pb-5 px-1">
+  {% include section.html
+    heading="Display"
     body="Decent features an infinitely nestable grid based on percentage widths. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor."
   %}
 
   <div class="p-2 cbgg-8">
-    <div class="row mln-1">
+    <div class="clearfix mln-1">
       <div class="col-2 pl-1">
         <div class="ratio-1_2 cbgg-2 mb-1">
           <div class="flex hp-100 wp-100 pt-2 justify-center"><pre><code class="code--dark">.ratio-1_2</code></pre></div>
         </div>
       </div>
       <div class="col-2 pl-1">
-        <div class="ratio-iphone6 cbgg-2 mb-1">
-          <div class="flex hp-100 wp-100 pt-2 justify-center"><pre><code class="code--dark">.ratio-iphone6</code></pre></div>
+        <div class="ratio-iphone7 cbgg-2 mb-1">
+          <div class="flex hp-100 wp-100 pt-2 justify-center"><pre><code class="code--dark">.ratio-iphone7</code></pre></div>
         </div>
       </div>
       <div class="col-2 pl-1">
@@ -409,65 +521,31 @@ layout: default
       </div>
     </div>
   </div>
-</section>
 
-<section class="container py-4 px-1">
-  {% include section.html
-    heading="Color"
-    body="Decent features an infinitely nestable grid based on percentage widths. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor."
+  {% include snippet.html
+    settings="$ratios: (
+  1_1: 1/1,
+  1_2: 2/1,
+  4_3: 3/4,
+  5_3: 3/5,
+  16_9: 9/16,
+  21_9: 9/21,
+  36_9: 9/36,
+  iphone7: 1334/750,
+  macbookpro15: 1800/2880
+)"
   %}
-
-  <div class="flex mln-2">
-
-    <div class="col-6 pl-2">
-      <div class="flex flex-wrap">
-        {% include blocks/color_swatch.html name="primary" %}
-        {% include blocks/color_swatch.html name="secondary" %}
-        {% include blocks/color_swatch.html name="success" %}
-        {% include blocks/color_swatch.html name="warning" %}
-        {% include blocks/color_swatch.html name="error" %}
-      </div>
-
-      <div class="wp-100 p-2">
-        <p class="tn-3 tracked uppercase mb-1 cg-4 antialiased">Settings</p>
-        <pre class="cbgg-8 wp-100 p-2"><code>$color-primary:   #3498db;
-$color-secondary: #34495e;
-$color-error:     #e74c3c;
-$color-warning:   #f39c12;
-$color-success:   #27ae60;
-
-$greys:           #1f232b
-                  lighten(#1f232b, 5%)
-                  lighten(#1f232b, 15%)
-                  lighten(#1f232b, 25%)
-                  lighten(#1f232b, 45%)
-                  lighten(#1f232b, 60%)
-                  lighten(#1f232b, 76%)
-                  lighten(#1f232b, 81%);</code></pre>
-      </div>
-    </div>
-
-    <div class="col-6 pl-2">
-      <div class="flex flex-wrap">
-        {% include blocks/color_swatch.html name="black" %}
-        {% include blocks/color_swatch.html name="1" grey="true" %}
-        {% include blocks/color_swatch.html name="2" grey="true" %}
-        {% include blocks/color_swatch.html name="3" grey="true" %}
-        {% include blocks/color_swatch.html name="4" grey="true" %}
-        {% include blocks/color_swatch.html name="5" grey="true" %}
-        {% include blocks/color_swatch.html name="6" grey="true" %}
-        {% include blocks/color_swatch.html name="7" grey="true" %}
-        {% include blocks/color_swatch.html name="8" grey="true" %}
-        {% include blocks/color_swatch.html name="white" %}
-      </div>
-    </div>
-  </div>
 </section>
 
 <section class="container pb-4">
   {% include section.html
-    heading="Display"
-    body="WIP"
+    heading="Reset"
+    body="The reset module is based on the <a href='http://meyerweb.com/eric/tools/css/reset/'>Meyers Reset CSS</a>. Additionally, you can choose to reset all input styles."
+    spacing="2"
+  %}
+
+  {% include snippet.html
+    settings="$reset-inputs: true;"
   %}
 </section>
 
@@ -488,13 +566,6 @@ $greys:           #1f232b
 <section class="container pb-4">
   {% include section.html
     heading="Table"
-    body="WIP"
-  %}
-</section>
-
-<section class="container pb-4">
-  {% include section.html
-    heading="Reset"
     body="WIP"
   %}
 </section>

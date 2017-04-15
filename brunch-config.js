@@ -1,6 +1,6 @@
 module.exports = {
   paths: {
-    watched: ['source']
+    watched: ['source', 'node_modules/decent-scss/modules']
   },
 
   files: {
@@ -42,4 +42,3 @@ module.exports = {
     }
   }
 }
-
